@@ -18,16 +18,9 @@ Aplicado ao Complexo Minerador S11D
 </p>
 
 <h3 align="center">
-Aplicado ao Complexo Minerador S11D
 </h3>
 
 <p align="center">
-
-![Status](https://img.shields.io/badge/Status-Concluído-success)
-![TCC](https://img.shields.io/badge/TCC-2026-blue)
-![Vale](https://img.shields.io/badge/Aplicação-S11D-green)
-
-</p>
 
 
 # 📖 Resumo
@@ -36,13 +29,11 @@ Este trabalho apresenta o desenvolvimento de um sistema conceitual para monitora
 
 A solução integra indicadores operacionais, geotécnicos e de criticidade para auxiliar a identificação de condições que aceleram a degradação dos pneus, contribuindo para a redução de custos operacionais e aumento da disponibilidade física dos equipamentos.
 
----
 
 # 🎯 Objetivo Geral
 
 Desenvolver um sistema integrado capaz de correlacionar variáveis operacionais e geotécnicas associadas ao desgaste prematuro e falhas de pneus OTR em operações de mineração a céu aberto.
 
----
 
 # 🎯 Objetivos Específicos
 
@@ -53,7 +44,6 @@ Desenvolver um sistema integrado capaz de correlacionar variáveis operacionais 
 - Reduzir falhas prematuras em pneus OTR.
 - Melhorar a confiabilidade operacional.
 
----
 
 # 🚜 Contexto de Aplicação
 
