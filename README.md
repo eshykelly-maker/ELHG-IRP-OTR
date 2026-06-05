@@ -92,11 +92,9 @@ Complexo Minerador S11D
 # 🛠 Tecnologias Utilizadas
 
 - Google AI Studio
-- Gemini API
 - JavaScript
 - HTML5
 - CSS3
-- Firebase
 - GIS Web Mapping
 
 # 📈 Resultados Esperados
