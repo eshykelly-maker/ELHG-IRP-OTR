@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #444444!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444444!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="resources/photon-geocoder-autocomplete.min.js"></script>
+        <script src="resources/olms.js"></script>
+        <script src="layers/curvas_de_niveisbancadas_3.js"></script><script src="layers/trecho_baixo_4.js"></script><script src="layers/trecho_medio_5.js"></script><script src="layers/trecho_alto_6.js"></script><script src="layers/rea_de_estudo_7.js"></script>
+        <script src="styles/curvas_de_niveisbancadas_3_style.js"></script><script src="styles/trecho_baixo_4_style.js"></script><script src="styles/trecho_medio_5_style.js"></script><script src="styles/trecho_alto_6_style.js"></script><script src="styles/rea_de_estudo_7_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>        
+        <script>
+            window.addEventListener('message', function(event) {
+                if (event.data && event.data.type === 'TOGGLE_LAYER') {
+                    if (window.layersList) {
+                        var layerTitle = event.data.layerTitle;
+                        var visible = event.data.visible;
+                        for (var i=0; i<window.layersList.length; i++) {
+                            var title = window.layersList[i].get('title');
+                            // Clean HTML from title if it has image tag
+                            var cleanTitle = title;
+                            if (cleanTitle.indexOf('<img') > -1) {
+                                // Extract the text after img tag or just strip tags
+                                cleanTitle = cleanTitle.replace(/<[^>]*>/g, '').trim();
+                            }
+                            if (cleanTitle.indexOf(layerTitle) > -1 || layerTitle === title) {
+                                window.layersList[i].setVisible(visible);
+                            }
+                        }
+                    }
+                } else if (event.data && event.data.type === 'CLEAR_ALL_LAYERS') {
+                    if (window.layersList) {
+                        for (var i=0; i<window.layersList.length; i++) {
+                             // Let's keep Google Satellite (index 0) visible perhaps? Or hide all?
+                             // Usually "mapa limpo" means just the basemap.
+                            if (i > 0) window.layersList[i].setVisible(false);
+                        }
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
