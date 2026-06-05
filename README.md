@@ -10,7 +10,6 @@ SISTEMA CONCEITUAL INTEGRADO AO DESGASTE E FALHAS DE PNEUS OTR EM MINERAÇÃO A 
 Aplicado ao Complexo Minerador S11D
 </h3>
 
----
 
 ## Dashboard do Sistema
 
@@ -30,7 +29,6 @@ Aplicado ao Complexo Minerador S11D
 
 </p>
 
----
 
 # 📖 Resumo
 
@@ -67,8 +65,6 @@ Complexo Minerador S11D
 - Ambientes com elevada abrasividade.
 - Condições severas de operação.
 
----
-
 
 ### Principais módulos
 
@@ -88,27 +84,6 @@ Complexo Minerador S11D
 
 ✅ Avaliação de impactos operacionais
 
----
-
-# ⚙️ Arquitetura Conceitual
-
-```text
-Dados Operacionais
-          │
-          ▼
-Processamento de Indicadores
-          │
-          ▼
-Matriz de Criticidade
-          │
-          ▼
-Índice de Risco IRP-OTR
-          │
-          ▼
-Dashboard Gerencial
-```
-
----
 
 # 📊 Variáveis Consideradas
 
@@ -134,8 +109,6 @@ Dashboard Gerencial
 - Firebase
 - GIS Web Mapping
 
----
-
 # 📈 Resultados Esperados
 
 - Redução de falhas prematuras.
@@ -144,25 +117,20 @@ Dashboard Gerencial
 - Melhor tomada de decisão.
 - Maior segurança operacional.
 
----
-
 # 👨‍🎓 Autor
 
 **Eshelly Soares e Hugo Teixeira**
 
----
 
 # 👨‍🏫 Orientador
 
 **John da Silva**
 
----
 
 # 🏫 Instituição
 
 **Serviço Nacional de Aprendizagem Industrial**
 
----
 
 # 📅 Ano
 
